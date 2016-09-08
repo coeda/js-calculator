@@ -18,8 +18,10 @@ function calculatorModule(){
    * @return { Number }    current total
    */
 
+
    calculator.load = function(number){
-     total = number;
+    var validatedNumber = validate(number);
+     total = validatedNumber;
      return total;
      };
 
@@ -38,10 +40,9 @@ function calculatorModule(){
    */
 
    calculator.add = function(number){
-      if(!isNaN(number)){
-        return total += number;
+    var validatedNumber = validate(number);
+    return total += validatedNumber;
 
-      }
    };
 
 
@@ -51,9 +52,9 @@ function calculatorModule(){
    */
 
    calculator.subtract = function(number){
-      if (!isNaN(number)){
-        return total -= number;
-      }
+    var validatedNumber = validate(number);
+    return total -= validatedNumber;
+
    };
 
 
@@ -63,9 +64,9 @@ function calculatorModule(){
    */
 
    calculator.multiply = function(number){
-      if (!isNaN(number)){
-        return total *= number;
-      }
+    var validatedNumber = validate(number);
+    return total *= validatedNumber;
+
    };
 
 
@@ -75,9 +76,8 @@ function calculatorModule(){
    */
 
   calculator.divide = function(number){
-      if(!isNaN(number)){
-        return total /= number;
-      }
+    var validatedNumber = validate(number);
+    return total /= validatedNumber;
   };
 
   /**
@@ -110,7 +110,15 @@ function calculatorModule(){
    * Validation
    */
 
+   validate = function(newNumber){
+    if(typeof newNumber !== 'number'){
+        throw new Error('Wrong data type');
+    }
+    else{
+    return newNumber;
+    }
+   };
 
 return calculator;
 
-  }
+}
