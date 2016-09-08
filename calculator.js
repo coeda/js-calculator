@@ -95,13 +95,16 @@ function calculatorModule(){
 
    calculator.saveMemory = function(){
     memory = total;
-
    };
 
 
   /**
    * Clear the value stored at `memory`
    */
+
+   calculator.clearMemory = function(){
+    memory = 0;
+   };
 
   /**
    * Validation
