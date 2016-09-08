@@ -10,7 +10,7 @@ function calculatorModule(){
   var calculator = {};
 
   var _memory;
-  var _total;
+  var _total = 0;
 
   /**
    * sets the `total` to the number passed in
@@ -19,7 +19,7 @@ function calculatorModule(){
    */
 
    calculator.load = function(number){
-   _total = number;
+     _total = number;
 
 
   /**
@@ -27,12 +27,22 @@ function calculatorModule(){
    * @return { Number }
    */
     return _total;
+  };
 
   /**
    * Sums the value passed in with `total`
    * @param { Number } x
    */
+   calculator.getTotal = function(number){
+    if(isNaN(number)){
 
+    }
+    else {
+      _total += number;
+    }
+    return _total;
+
+   };
 
   /**
    * Subtracts the value passed in from `total`
@@ -70,7 +80,7 @@ function calculatorModule(){
   /**
    * Validation
    */
-  };
+
 
 return calculator;
 
