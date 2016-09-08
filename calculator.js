@@ -93,6 +93,11 @@ function calculatorModule(){
    * Stores the value of `total` to `memory`
    */
 
+   calculator.saveMemory = function(){
+    memory = total;
+
+   };
+
 
   /**
    * Clear the value stored at `memory`
