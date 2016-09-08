@@ -7,8 +7,6 @@
  */
 
 function calculatorModule(){
-  var module = {};
-
   var calculator = {};
 
   var _memory;
@@ -19,13 +17,10 @@ function calculatorModule(){
    * @param  { Number } x
    * @return { Number }    current total
    */
-   module.setNumber = function(number){
 
-    _total = number;
-    return _total;
-
+   calculator.load = function(){
+   _total = number;
    };
-
 
   /**
    * Return the value of `total`
@@ -76,6 +71,6 @@ function calculatorModule(){
    * Validation
    */
 
-return  calculator;
+return calculator;
 
   }
