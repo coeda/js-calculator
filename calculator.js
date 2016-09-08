@@ -63,6 +63,12 @@ function calculatorModule(){
    * @param  { Number } x
    */
 
+   calculator.multiply = function(number){
+        if (!isNaN(number)){
+      return total *= number;
+    }
+   };
+
 
   /**
    * Divides the value passing in by `total`
