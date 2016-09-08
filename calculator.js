@@ -18,15 +18,15 @@ function calculatorModule(){
    * @return { Number }    current total
    */
 
-   calculator.load = function(){
+   calculator.load = function(number){
    _total = number;
-   };
+
 
   /**
    * Return the value of `total`
    * @return { Number }
    */
-
+    return _total;
 
   /**
    * Sums the value passed in with `total`
@@ -70,6 +70,7 @@ function calculatorModule(){
   /**
    * Validation
    */
+  };
 
 return calculator;
 
