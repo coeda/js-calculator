@@ -9,8 +9,8 @@
 function calculatorModule(){
   var calculator = {};
 
-  var _memory;
-  var _total = 0;
+  var memory;
+  var total = 0;
 
   /**
    * sets the `total` to the number passed in
@@ -19,8 +19,8 @@ function calculatorModule(){
    */
 
    calculator.load = function(number){
-     _total = number;
-     return _total;
+     total = number;
+     return total;
      };
 
   /**
@@ -28,7 +28,7 @@ function calculatorModule(){
    * @return { Number }
    */
    calculator.getTotal = function(number){
-    return _total;
+    return total;
 
    };
 
@@ -40,7 +40,7 @@ function calculatorModule(){
    calculator.add = function(number){
     if(!isNaN(number)){
 
-      return _total += number;
+      return total += number;
 
     }
    };
@@ -51,6 +51,11 @@ function calculatorModule(){
    * @param  { Number } x
    */
 
+   calculator.subtract = function(number){
+    if (!isNaN(number)){
+      return total -= number;
+    }
+   };
 
 
   /**
