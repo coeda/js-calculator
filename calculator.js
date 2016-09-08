@@ -28,12 +28,6 @@ function calculatorModule(){
    * @return { Number }
    */
    calculator.getTotal = function(number){
-    if(isNaN(number)){
-
-    }
-    else {
-      _total += number;
-    }
     return _total;
 
    };
@@ -42,6 +36,14 @@ function calculatorModule(){
    * Sums the value passed in with `total`
    * @param { Number } x
    */
+
+   calculator.add = function(number){
+    if(!isNaN(number)){
+
+      return _total += number;
+
+    }
+   };
 
 
   /**
