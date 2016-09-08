@@ -20,18 +20,12 @@ function calculatorModule(){
 
    calculator.load = function(number){
      _total = number;
-
+     return _total;
+     };
 
   /**
    * Return the value of `total`
    * @return { Number }
-   */
-    return _total;
-  };
-
-  /**
-   * Sums the value passed in with `total`
-   * @param { Number } x
    */
    calculator.getTotal = function(number){
     if(isNaN(number)){
@@ -45,9 +39,16 @@ function calculatorModule(){
    };
 
   /**
+   * Sums the value passed in with `total`
+   * @param { Number } x
+   */
+
+
+  /**
    * Subtracts the value passed in from `total`
    * @param  { Number } x
    */
+
 
 
   /**
