@@ -9,7 +9,7 @@
 function calculatorModule(){
   var calculator = {};
 
-  var memory;
+  var memory = 0;
   var total = 0;
 
   /**
@@ -85,6 +85,9 @@ function calculatorModule(){
    * @return { Number }
    */
 
+  calculator.recallMemory = function(number){
+    return memory;
+  };
 
   /**
    * Stores the value of `total` to `memory`
