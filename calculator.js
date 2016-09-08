@@ -38,11 +38,10 @@ function calculatorModule(){
    */
 
    calculator.add = function(number){
-    if(!isNaN(number)){
+      if(!isNaN(number)){
+        return total += number;
 
-      return total += number;
-
-    }
+      }
    };
 
 
@@ -52,9 +51,9 @@ function calculatorModule(){
    */
 
    calculator.subtract = function(number){
-    if (!isNaN(number)){
-      return total -= number;
-    }
+      if (!isNaN(number)){
+        return total -= number;
+      }
    };
 
 
@@ -64,9 +63,9 @@ function calculatorModule(){
    */
 
    calculator.multiply = function(number){
-        if (!isNaN(number)){
-      return total *= number;
-    }
+      if (!isNaN(number)){
+        return total *= number;
+      }
    };
 
 
@@ -75,6 +74,11 @@ function calculatorModule(){
    * @param  { Number } x
    */
 
+  calculator.divide = function(number){
+      if(!isNaN(number)){
+        return total /= number;
+      }
+  };
 
   /**
    * Return the value stored at `memory`
